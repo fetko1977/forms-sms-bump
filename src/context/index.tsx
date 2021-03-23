@@ -2,7 +2,11 @@ import React from 'react';
 import { IState, IAction } from '../interfaces';
 
 const initialState: IState = {
-    responsiveMode: 'desktop'
+    responsiveMode: 'desktop',
+    selectedForm: {
+        states: [{ value: 'draft', label: 'Draft' }, { value: 'published', label: 'Published'}],
+        selectedState: { value: 'draft', label: 'Draft' }
+    }
 }
 
 const defaultAction: React.Dispatch<IAction> = () => {};
@@ -12,6 +16,8 @@ const FormDispatchContext = React.createContext<React.Dispatch<IAction>>(default
 
 function formReducer(state: IState, action: IAction) {
     switch (action.type) {
+        case 'UPDATE_STATE_OF_SELECTED_FORM':
+            return {...state, selectedForm: { ...state.selectedForm, selectedState: action.payload }}
         default: {
             return state;
         }

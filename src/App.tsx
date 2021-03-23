@@ -1,9 +1,10 @@
 import './App.scss';
+import Header from './components/Header';
 
-function App() {
+const App = ():JSX.Element => {
   return (
     <div className="App">
-      This is my App
+      <Header />
     </div>
   );
 }
