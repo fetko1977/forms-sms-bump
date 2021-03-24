@@ -2,5 +2,98 @@
     height: 64px;
     background: #fff;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    border-bottom: 1px solid #E4E4E4;
+
+    &__logo {
+        display: inline-flex;
+        width: auto;
+        padding-right: 50px;
+    }
+
+    &__form {
+        &-info {
+            display: inline-flex;
+            width: 100%;
+            flex: 1;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 50px;
+            padding-right: 30px;
+            border-left: 1px solid #E2E9EF;
+            border-right: 1px solid #E2E9EF;
+    
+            &-name {
+                display: flex;
+                align-items: center;
+    
+                svg {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &-edit-exit {
+            display: inline-flex;
+            width: auto;
+            padding-left: 30px;
+    
+            &-btn {
+                background: none;
+                border: none;
+                width: 56px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        &-state {
+            &-select {
+                min-width: 140px;
+                
+                .smsb {
+                    &__control {
+                        border: 1px solid #212B35;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    &__single-value {
+                        font-size: 13px;
+                        color: #333;
+                    }
+
+                    &__value-container {
+                        padding-left: 28px;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            border: 1px solid #606DC5;
+                            left: 10px;
+                        }
+                    }
+
+                    &__indicator-separator {
+                        display: none;
+                    }
+                }
+
+                &-wrapper {
+
+                }
+            }
+        }
+    }
 }

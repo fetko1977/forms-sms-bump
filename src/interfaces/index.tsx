@@ -7,7 +7,10 @@ export interface IState {
 
 export interface IStateForm {
     states: Array<OptionTypeBase>,
-    selectedState: OptionTypeBase
+    selectedState: OptionTypeBase,
+    editMode: string,
+    editSuccess: boolean
+
 }
 
 export interface IAction {

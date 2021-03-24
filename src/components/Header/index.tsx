@@ -1,7 +1,7 @@
 import React from 'react'
-import { ReactComponent as Logo } from '../../assets/logo.svg';
-import { ReactComponent as FormEditIcon } from '../../assets/Pen-icon.svg';
-import { ReactComponent as FormEditExitIcon } from '../../assets/Exit-icon.svg';
+import { ReactComponent as Logo } from '../../assets/images/logo.svg';
+import { ReactComponent as FormEditIcon } from '../../assets/images/Pen-icon.svg';
+import { ReactComponent as FormEditExitIcon } from '../../assets/images/Exit-icon.svg';
 import Select, { OptionTypeBase } from 'react-select';
 
 import { useFormDispatch, useFormState } from '../../context';
@@ -24,11 +24,13 @@ const Header = () => {
                 <div className="header__form-info-name">
                     <FormEditIcon /> Form 1
                 </div>
-                <div className="header__form-state">
+                <div className="header__form-state-select-wrapper">
                     <Select 
                         value={selectedState}
                         onChange={handleFormStateChange}
                         options={states}
+                        className="header__form-state-select"
+                        classNamePrefix="smsb"
                     />
                 </div>
             </div>
