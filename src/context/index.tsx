@@ -18,6 +18,8 @@ const FormDispatchContext = React.createContext<React.Dispatch<IAction>>(default
 
 function formReducer(state: IState, action: IAction) {
     switch (action.type) {
+        case 'UPDATE_RESPONSIVE_MODE':
+            return { ...state, responsiveMode: action.payload }
         case 'UPDATE_STATE_OF_SELECTED_FORM':
             return {...state, selectedForm: { ...state.selectedForm, selectedState: action.payload }}
         case 'UPDATE_MODE_OF_SELECTED_FORM':

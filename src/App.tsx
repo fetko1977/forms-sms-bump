@@ -2,6 +2,7 @@ import './App.scss';
 import Header from './components/Header';
 import SubMenu from './components/SubMenu';
 import Sidebar from './components/Sidebar';
+import Form from './components/Form';
 
 const App = ():JSX.Element => {
   return (
@@ -10,6 +11,7 @@ const App = ():JSX.Element => {
       <SubMenu />
       <main className="main-content">
         <Sidebar />
+        <Form />
       </main>
     </div>
   );

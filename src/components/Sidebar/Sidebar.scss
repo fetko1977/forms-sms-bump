@@ -1,3 +1,92 @@
 .sidebar {
     width: 235px;
+    background: #fff;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+
+    &__responsive-state-cta {
+        background: none;
+        border: none;
+        margin: 0 23.5px;
+        padding: 0;
+        cursor: pointer;
+
+        &.selected {
+            svg {
+                path {
+                    stroke: #606DC5;
+                }
+
+                g {
+                    stroke: #606DC5;
+                }
+
+                #Rectangle_1567, #Rectangle_1565 {
+                    fill: #606DC5;
+                }
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &-wrapper {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    &__toolbar {
+        display: flex;
+        flex-direction: column;
+        &-item {
+            display: flex;
+            width: 100%;
+            border: none;
+            background: none;
+            align-items: center;
+            margin-top: 30px;
+            padding-left: 30px;
+            cursor: pointer;
+
+            &:focus {
+                outline: none;
+            }
+
+            svg {
+                margin-right: 21px;
+            }
+        }
+    }
+
+    &__form-steps-cta {
+        position: fixed;
+        bottom: 0;
+        width: 235px;
+        height: 40px;
+        background: #606DC5;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        border-radius: 0;
+        font-size: 13px;
+
+        svg {
+            position: absolute;
+            right: 20px;
+        }
+
+        &-wrapper {
+
+        }
+    }
 }

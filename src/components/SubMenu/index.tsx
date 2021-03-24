@@ -1,7 +1,5 @@
 import React from 'react'
-import { ReactComponent as TrashIcon } from '../../assets/images/Trash-icon.svg';
-import { ReactComponent as UndoIcon } from '../../assets/images/Undo-icon.svg';
-import { ReactComponent as RedoIcon } from '../../assets/images/Redo-icon.svg';
+import { TrashIcon, UndoIcon, RedoIcon } from '../../icons';
 
 import { useFormDispatch, useFormState } from '../../context';
 

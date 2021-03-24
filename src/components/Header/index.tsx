@@ -1,7 +1,5 @@
 import React from 'react'
-import { ReactComponent as Logo } from '../../assets/images/logo.svg';
-import { ReactComponent as FormEditIcon } from '../../assets/images/Pen-icon.svg';
-import { ReactComponent as FormEditExitIcon } from '../../assets/images/Exit-icon.svg';
+import { Logo, FormEditIcon, FormEditExitIcon } from '../../icons';
 import Select, { OptionTypeBase } from 'react-select';
 
 import { useFormDispatch, useFormState } from '../../context';
