@@ -8,7 +8,7 @@ const initialState: IState = {
         selectedState: { value: 'draft', label: 'Draft' },
         editMode: 'design',
         editSuccess: false,
-        selectedTheme: 'ThemeTwo',
+        selectedTheme: 'ThemeOne',
         selectedTool: ''
     }
 }
@@ -21,15 +21,15 @@ const FormDispatchContext = React.createContext<React.Dispatch<IAction>>(default
 function formReducer(state: IState, action: IAction) {
     switch (action.type) {
         case 'UPDATE_RESPONSIVE_MODE':
-            return { ...state, responsiveMode: action.payload }
+            return { ...state, responsiveMode: action.payload, selectedForm: { ...state.selectedForm, selectedTool: '' } }
         case 'UPDATE_STATE_OF_SELECTED_FORM':
-            return {...state, selectedForm: { ...state.selectedForm, selectedState: action.payload }}
+            return {...state, selectedForm: { ...state.selectedForm, selectedState: action.payload, selectedTool: '' }}
         case 'UPDATE_SELECTED_THEME':
-                return {...state, selectedForm: { ...state.selectedForm, selectedTheme: action.payload }}
+                return {...state, selectedForm: { ...state.selectedForm, selectedTheme: action.payload, selectedTool: '' }}
         case 'UPDATE_SELECTED_TOOL':
             return {...state, selectedForm: { ...state.selectedForm, selectedTool: action.payload }}
         case 'UPDATE_MODE_OF_SELECTED_FORM':
-            return {...state, selectedForm: { ...state.selectedForm, editMode: action.payload }}
+            return {...state, selectedForm: { ...state.selectedForm, editMode: action.payload, selectedTool: '' }}
         case 'UPDATE_SUCCESS_OF_SELECTED_FORM':
             return {...state, selectedForm: { ...state.selectedForm, editSuccess: action.payload }}
         default: {

@@ -50,18 +50,58 @@
         z-index: 5;
         background: #fff;
         height: calc(100% - 90px);
+        padding-top: 30px;
         &-item {
             display: flex;
             width: 100%;
             border: none;
             background: none;
             align-items: center;
-            margin-top: 30px;
             padding-left: 30px;
             cursor: pointer;
+            height: 50px;
 
             &:focus {
                 outline: none;
+            }
+
+            &.selected {
+                background: #F7F7F7;
+                transition: all 1s ease;
+                position: relative;
+                color: #606DC5;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background: url(../../assets/images/selected-tool-indicator.svg) no-repeat;
+                    height: 50px;
+                    width: 5px;
+                    left: 0;
+                }
+
+                svg {
+                    path {
+                        stroke: #606DC5;
+                    }
+    
+                    g {
+                        stroke: #606DC5;
+                    }
+    
+                    #Rectangle_1590, #Rectangle_1591, #Rectangle_1592, #Rectangle_1593, #Rectangle_1566,
+                    #Rectangle_1600, #Rectangle_1604 {
+                        stroke: #606DC5;
+                    }
+
+                    #Rectangle_1565, #Rectangle_1605, #Rectangle_1567 {
+                        fill: #606DC5;
+                    }
+
+                    circle {
+                        stroke: #606DC5;
+                    }
+                }
             }
 
             svg {
@@ -84,6 +124,7 @@
         cursor: pointer;
         border-radius: 0;
         font-size: 13px;
+        z-index: 10;
 
         svg {
             position: absolute;
@@ -93,5 +134,18 @@
         &-wrapper {
 
         }
+    }
+
+    &__overlay {
+        position: fixed;
+        background: rgba(0, 0, 0, .65);
+        width: 100%;
+        z-index: 2;
+        left: 235px;
+        right: 0;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        transition: all 1s ease;
     }
 }

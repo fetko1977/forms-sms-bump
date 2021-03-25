@@ -20,6 +20,7 @@ const ThemesMenu = () => {
             return;
         }
 
+        // We update the selected theme and we close menu
         dispatch({ type: 'UPDATE_SELECTED_THEME', payload: themeName });
     }
 

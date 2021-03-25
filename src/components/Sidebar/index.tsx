@@ -60,43 +60,43 @@ const Sidebar = () => {
             <SidebarMenu />
             <div className="sidebar__toolbar">
                 <button
-                    className="sidebar__toolbar-item"
+                    className={ selectedTool === 'theme' ? 'sidebar__toolbar-item selected' : 'sidebar__toolbar-item'}
                     onClick={() => handleToolItemClick('theme')}
                 ><ThemeIcon /> Theme</button>
                 <button
-                    className="sidebar__toolbar-item"
+                    className={ selectedTool === 'form' ? 'sidebar__toolbar-item selected' : 'sidebar__toolbar-item'}
                     onClick={() => handleToolItemClick('form')}
                 ><FormIcon /> Form</button>
                 <button
-                    className="sidebar__toolbar-item"
+                    className={ selectedTool === 'text' ? 'sidebar__toolbar-item selected' : 'sidebar__toolbar-item'}
                     onClick={() => handleToolItemClick('text')}
                 ><TextIcon /> Text</button>
                 <button
-                    className="sidebar__toolbar-item"
+                    className={ selectedTool === 'phone' ? 'sidebar__toolbar-item selected' : 'sidebar__toolbar-item'}
                     onClick={() => handleToolItemClick('phone')}
                 ><PhoneFieldIcon /> Phone Field</button>
                 <button
-                    className="sidebar__toolbar-item"
+                    className={ selectedTool === 'email' ? 'sidebar__toolbar-item selected' : 'sidebar__toolbar-item'}
                     onClick={() => handleToolItemClick('email')}
                 ><EmailFieldIcon /> Email Field</button>
                 <button
-                    className="sidebar__toolbar-item"
+                    className={ selectedTool === 'name' ? 'sidebar__toolbar-item selected' : 'sidebar__toolbar-item'}
                     onClick={() => handleToolItemClick('name')}
                 ><NameFieldIcon /> Name Field</button>
                 <button
-                    className="sidebar__toolbar-item"
+                    className={ selectedTool === 'button' ? 'sidebar__toolbar-item selected' : 'sidebar__toolbar-item'}
                     onClick={() => handleToolItemClick('button')}
                 ><ButtonFieldIcon /> Button Field</button>
                 <button
-                    className="sidebar__toolbar-item"
+                    className={ selectedTool === 'checkbox' ? 'sidebar__toolbar-item selected' : 'sidebar__toolbar-item'}
                     onClick={() => handleToolItemClick('checkbox')}
                 ><CheckboxIcon /> Checkbox</button>
                 <button
-                    className="sidebar__toolbar-item"
+                    className={ selectedTool === 'close' ? 'sidebar__toolbar-item selected' : 'sidebar__toolbar-item'}
                     onClick={() => handleToolItemClick('close')}
                 ><CloseButtonIcon /> Close Button</button>
                 <button
-                    className="sidebar__toolbar-item"
+                    className={ selectedTool === 'compliance' ? 'sidebar__toolbar-item selected' : 'sidebar__toolbar-item'}
                     onClick={() => handleToolItemClick('compliance')}
                 ><ComplianceIcon /> Compliance</button>
             </div>
