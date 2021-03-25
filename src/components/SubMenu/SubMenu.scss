@@ -100,6 +100,13 @@
                             align-items: center;
                             font-size: 13px;
                             margin-right: 20px;
+
+                            font-family: 'Oxygen', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue',
+                                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+                                sans-serif;
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                            
                             svg {
                                 margin-right: 4.5px;
                             }
@@ -129,6 +136,11 @@
                             padding: 0;
                             align-items: center;
                             font-size: 13px;
+                            font-family: 'Oxygen', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue',
+                                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+                                sans-serif;
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
                             svg {
                                 margin-right: 8px;
                             }
