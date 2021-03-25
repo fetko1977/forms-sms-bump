@@ -7,7 +7,9 @@ const initialState: IState = {
         states: [{ value: 'draft', label: 'Draft' }, { value: 'published', label: 'Published'}],
         selectedState: { value: 'draft', label: 'Draft' },
         editMode: 'design',
-        editSuccess: false
+        editSuccess: false,
+        selectedTheme: 'ThemeTwo',
+        selectedTool: ''
     }
 }
 
@@ -22,6 +24,10 @@ function formReducer(state: IState, action: IAction) {
             return { ...state, responsiveMode: action.payload }
         case 'UPDATE_STATE_OF_SELECTED_FORM':
             return {...state, selectedForm: { ...state.selectedForm, selectedState: action.payload }}
+        case 'UPDATE_SELECTED_THEME':
+                return {...state, selectedForm: { ...state.selectedForm, selectedTheme: action.payload }}
+        case 'UPDATE_SELECTED_TOOL':
+            return {...state, selectedForm: { ...state.selectedForm, selectedTool: action.payload }}
         case 'UPDATE_MODE_OF_SELECTED_FORM':
             return {...state, selectedForm: { ...state.selectedForm, editMode: action.payload }}
         case 'UPDATE_SUCCESS_OF_SELECTED_FORM':

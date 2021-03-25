@@ -1,5 +1,5 @@
 import './Sidebar.scss';
-
+import React from 'react';
 import { 
     DesktopIcon, 
     TabletIcon, 
@@ -18,8 +18,11 @@ import {
  } from '../../icons';
 import { useFormState, useFormDispatch } from '../../context';
 
+import SidebarMenu from '../SidebarMenu';
+
 const Sidebar = () => {
-    const { responsiveMode } = useFormState();
+    const { responsiveMode, selectedForm } = useFormState();
+    const { selectedTool } = selectedForm;
     const dispatch = useFormDispatch();
     
     const changeResponsiveMode = (mode: string) => {
@@ -31,7 +34,11 @@ const Sidebar = () => {
     }
 
     const handleToolItemClick = (tool: string) => {
+        if (selectedTool === tool) {
+            return;
+        }
 
+        dispatch({ type: 'UPDATE_SELECTED_TOOL', payload: tool })
     }
 
     return (
@@ -50,6 +57,7 @@ const Sidebar = () => {
                     onClick={() =>changeResponsiveMode('mobile')}
                 ><MobileIcon /></button>
             </div>
+            <SidebarMenu />
             <div className="sidebar__toolbar">
                 <button
                     className="sidebar__toolbar-item"

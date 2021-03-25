@@ -1,0 +1,20 @@
+.sidebar-menu {
+    position: relative;
+    width: 330px;
+
+    .toolbar-menu {
+        position: absolute;
+        left: -330px;
+        opacity: 0;
+        transition: all 1s ease;
+        background: #F7F7F7;
+        width: 100%;
+        z-index: 2;
+
+        &--visible {
+            left: 235px;
+            opacity: 1;
+            transition: all 1s ease;
+        }
+    }
+}

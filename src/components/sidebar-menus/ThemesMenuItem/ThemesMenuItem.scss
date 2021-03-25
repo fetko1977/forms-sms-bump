@@ -1,0 +1,35 @@
+.themes-menu__item {
+    margin: 0 3px 18px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    img {
+        width: 120px;
+        height: 120px;
+    }
+
+    &-selected-label {
+        position: absolute;
+        top: -10px;
+        z-index: 2;
+        background: #0122A5;
+        color: #fff;
+        height: 20px;
+        width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        border-radius: 4px;
+    }
+
+    &-steps-copy {
+        font-size: 12px;
+
+        .steps-count {
+            color: #606DC5;
+        }
+    }
+}
